@@ -1,0 +1,17 @@
+// UNEXECUTED in Power BI Desktop. Create each measure separately in table FactEmployment.
+
+Opening Headcount = CALCULATE(COUNTROWS(FactEmployment), REMOVEFILTERS(DimDate))
+
+Leavers = COUNTA(FactEmployment[LeaveDate])
+
+Attrition Rate = DIVIDE([Leavers], [Opening Headcount])
+
+Voluntary Share = DIVIDE(CALCULATE([Leavers], FactEmployment[LeaveType] = "Voluntary"), [Leavers])
+
+Avg Engagement = CALCULATE(AVERAGE(FactEmployment[EngagementScore]), REMOVEFILTERS(DimDate))
+
+Avg Engagement Leavers = CALCULATE(AVERAGE(FactEmployment[EngagementScore]), REMOVEFILTERS(DimDate), FactEmployment[LeaveDate] <> BLANK())
+
+Avg Engagement Stayers = CALCULATE(AVERAGE(FactEmployment[EngagementScore]), REMOVEFILTERS(DimDate), FactEmployment[LeaveDate] = BLANK())
+
+Engagement Gap = [Avg Engagement Stayers] - [Avg Engagement Leavers]

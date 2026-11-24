@@ -1,0 +1,65 @@
+{
+ "employees": 300,
+ "leavers": 54,
+ "attrition_pct": 18.0,
+ "voluntary": 40,
+ "voluntary_share_pct": 74.1,
+ "swapped_date_rows_fixed": 3,
+ "raw_rows_with_2025_leave_date": 51,
+ "by_department": {
+  "Engineering": {
+   "employees": 80,
+   "leavers": 10,
+   "attrition_pct": 12.5
+  },
+  "Finance": {
+   "employees": 30,
+   "leavers": 2,
+   "attrition_pct": 6.7
+  },
+  "HR": {
+   "employees": 20,
+   "leavers": 1,
+   "attrition_pct": 5.0
+  },
+  "Marketing": {
+   "employees": 40,
+   "leavers": 8,
+   "attrition_pct": 20.0
+  },
+  "Operations": {
+   "employees": 70,
+   "leavers": 12,
+   "attrition_pct": 17.1
+  },
+  "Sales": {
+   "employees": 60,
+   "leavers": 21,
+   "attrition_pct": 35.0
+  }
+ },
+ "by_tenure_band": {
+  "1-3y": {
+   "employees": 120,
+   "leavers": 21,
+   "attrition_pct": 17.5
+  },
+  "3y+": {
+   "employees": 120,
+   "leavers": 12,
+   "attrition_pct": 10.0
+  },
+  "<1y": {
+   "employees": 60,
+   "leavers": 21,
+   "attrition_pct": 35.0
+  }
+ },
+ "engagement_sentinel_99_in_raw": 6,
+ "engagement_nulls_raw": 40,
+ "valid_engagement_scores": 254,
+ "avg_engagement_leavers": 2.67,
+ "avg_engagement_stayers": 3.94,
+ "engagement_gap": 1.26,
+ "data_science_employees": 0
+}
